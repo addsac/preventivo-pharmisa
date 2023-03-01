@@ -6,6 +6,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    radius: {
+      none: '0',
+      sm: '5px',
+      base: '8px',
+      lg: '13px',
+      full: '9999px',
+    },
     fontSize: {
       xs: '12px',
       sm: '14px',
