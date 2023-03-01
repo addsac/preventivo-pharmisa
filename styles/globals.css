@@ -6,3 +6,23 @@ html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
+
+/* Styles for the proposal */
+h1{
+    @apply text-6xl;
+}
+h2{
+    @apply text-5xl;
+}
+h3{
+    @apply text-4xl;
+}
+h4{
+    @apply text-3xl;
+}
+h5{
+    @apply text-2xl;
+}
+p{
+    @apply text-base;
+}
