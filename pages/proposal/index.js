@@ -1,4 +1,3 @@
-import ButtonProposal from '@/components/ui/proposal/Button'
 import Head from 'next/head'
 
 export default function Home() {
@@ -13,14 +12,6 @@ export default function Home() {
 
       <main>
         <h1 className='font-family-georgia'> Proposal </h1>
-
-        <div className='w-64'>
-          <ButtonProposal 
-            color="primary"
-            size="large"
-            text="View contract"
-          />
-        </div>
       </main>
     </>
   )
