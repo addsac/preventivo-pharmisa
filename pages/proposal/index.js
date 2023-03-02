@@ -1,6 +1,7 @@
 import LayoutSidebar from '@/components/proposal/LayoutSidebar'
 import LayoutContent from '@/components/proposal/LayoutContent'
 import Sidebar from '@/components/proposal/Sidebar'
+import Content from '@/components/proposal/Content'
 import Head from 'next/head'
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='min-w-screen max-w-screen flex'>
+      <div className='relative min-w-screen max-w-screen flex'>
         {/* Sidebar */}
         <LayoutSidebar>
           <Sidebar />
@@ -23,7 +24,7 @@ export default function Home() {
 
         {/* Content */}
         <LayoutContent>
-          
+          <Content />
         </LayoutContent>
       </div>
     </>

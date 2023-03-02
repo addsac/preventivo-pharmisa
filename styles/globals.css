@@ -9,22 +9,22 @@ html {
 
 /* Styles for the proposal */
 h1{
-    @apply text-6xl tracking-[-3%];
+    @apply text-6xl tracking-[-1.3px] font-medium;
 }
 h2{
-    @apply text-5xl tracking-[-3%];
+    @apply text-5xl tracking-[-1px] font-medium;
 }
 h3{
-    @apply text-4xl tracking-[-3%];
+    @apply text-4xl tracking-[-1px] font-medium;
 }
 h4{
-    @apply text-3xl tracking-[-2%];
+    @apply text-3xl tracking-[-0.5px] font-medium;
 }
 h5{
-    @apply text-2xl tracking-[-1%];
+    @apply text-2xl tracking-[-0.5px] font-medium;
 }
 p{
-    @apply text-base tracking-[-1%];
+    @apply text-base tracking-[-0.3px];
 }
 .text-sidebar-subtitle{
     @apply text-sm text-gray-900/50 font-medium uppercase tracking-wide;

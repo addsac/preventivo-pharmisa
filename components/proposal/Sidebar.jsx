@@ -1,5 +1,5 @@
+import Button from '@/components/ui/proposal/Button'
 import Image from 'next/image'
-import Button from '../ui/proposal/Button'
 
 export default function Sidebar() {
   return (
@@ -49,12 +49,13 @@ export default function Sidebar() {
                     text='View contract'
                     color='primary'
                     size='large'
+                    iconArrow={true}
                 />
             </div>
         </div>
 
         {/* description */}
-        <div></div>
+        <div className='h-[80px] w-full '></div>
     </div>
   )
 }
