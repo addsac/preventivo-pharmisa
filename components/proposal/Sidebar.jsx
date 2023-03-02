@@ -1,46 +1,63 @@
 import Button from '@/components/ui/proposal/Button'
-import Image from 'next/image'
 
 export default function Sidebar() {
+  const goToSection = (id) => {
+    const element = document.getElementById(id)
+
+    // get the y of th element
+    const y = element.getBoundingClientRect().top + window.scrollY
+
+    window.scrollTo({ top: y - 128, behavior: 'smooth' })
+  }
+
   return (
-    <div className='h-full flex flex-col justify-between'>
+    <>
         {/* menu */}
-        <div className='flex flex-col gap-y-[120px]'>
-            {/* Logo */}
-            <div className="w-full h-[48px]">
-            <Image 
-                src='/proposal/logo.svg' 
-                width={200} 
-                height={48} 
-                alt='' 
-                className='h-full w-auto max-w-full max-h-full' 
-            />  
-            </div>
+        <div className='flex flex-col'>
+            <div className="w-full h-[48px]"></div> {/* space for the header */}
 
             {/* Navigation */}
-            <div className='flex flex-col gap-y-20'>
+            <div className='flex flex-col gap-y-16 mt-[108px]'>
                 <div className='flex flex-col gap-y-6'>
                     <p className='text-sidebar-subtitle'>
-                        Contenuti
+                        Sezioni
                     </p>
 
                     <div className="flex flex-col">
-                        <button className='button-sidebar-menu'>
+                        <button
+                            onClick={() => goToSection('1')}
+                            className='button-sidebar-menu'
+                        >
                             Overview
                         </button>
-                        <button className='button-sidebar-menu'>
+                        <button 
+                            onClick={ () => goToSection('2') }
+                            className='button-sidebar-menu'
+                        >
                             Project goals
                         </button>
-                        <button className='button-sidebar-menu'>
+                        <button
+                            onClick={ () => goToSection('3') }
+                            className='button-sidebar-menu'
+                        >
                             Delivereables
                         </button>
-                        <button className='button-sidebar-menu button-sidebar-menu-active'>
+                        <button 
+                            onClick={ () => goToSection('4') }
+                            className='button-sidebar-menu button-sidebar-menu-active'
+                        >
                             Pricing
                         </button>
-                        <button className='button-sidebar-menu'>
+                        <button 
+                            onClick={ () => goToSection('5') }
+                            className='button-sidebar-menu'
+                        >
                             Timeline and process
                         </button>
-                        <button className='button-sidebar-menu'>
+                        <button 
+                            onClick={ () => goToSection('6') }
+                            className='button-sidebar-menu'
+                        >
                             Next steps
                         </button>
                     </div>
@@ -53,9 +70,6 @@ export default function Sidebar() {
                 />
             </div>
         </div>
-
-        {/* description */}
-        <div className='h-[80px] w-full '></div>
-    </div>
+    </>
   )
 }
