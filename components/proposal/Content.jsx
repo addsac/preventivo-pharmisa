@@ -31,6 +31,8 @@ export default function Content() {
         <ButtonGroup
           text1='View contract'
           text2='Contact the seller'
+          href1='tel:3478741848'
+          href2='tel:3478741848'
         />
         <Spacing height={80} />
         <ProposalImage 

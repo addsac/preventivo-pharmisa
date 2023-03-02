@@ -1,8 +1,9 @@
 import IconArrow from '@/public/icon/proposal/arrow-right.svg'
 
-export default function Button({ color = 'primary', size = 'base', text = '', iconArrow = false  }) {
+export default function Button({ color = 'primary', size = 'base', text = '', href, iconArrow = false  }) {
   return (
     <button
+        onClick={href ? () => location.href(href) : null}
         className={`
             ${color == 'primary' && 'bg-gray-900 hover:bg-gray-800 text-white'}
             ${color == 'secondary' && 'bg-gray-100 hover:bg-gray-200 text-gray-900'}

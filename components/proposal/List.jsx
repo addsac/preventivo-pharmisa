@@ -5,8 +5,11 @@ export default function List({ data, type = 'points' }) {
         ${type === 'points' && 'list-disc'}
         flex flex-col gap-y-4 ml-4
     `}>
-        { data.map((item) => (
-            <li className='list-item'>
+        { data.map((item, index) => (
+            <li 
+                key={index}
+                className='list-item'
+            >
                 <p className='text-lg'>
                     { item }
                 </p>
