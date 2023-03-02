@@ -27,8 +27,6 @@ export default function LayoutContent({ children }) {
         </div>
       </div>
 
-      { children }
-
       {/* button fixed on bottom for mobile */}
       <div className="lg:hidden fixed bottom-0 border-t border-gray-200 px-8 py-4 flex items-center justify-center left-0 right-0 bg-white">
         <Button 
@@ -38,6 +36,8 @@ export default function LayoutContent({ children }) {
           iconArrow={true}
         />
       </div>
+
+      { children }
     </div>
   )
 }
