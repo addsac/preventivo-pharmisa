@@ -1,3 +1,6 @@
+import LayoutSidebar from '@/components/proposal/LayoutSidebar'
+import LayoutContent from '@/components/proposal/LayoutContent'
+import Sidebar from '@/components/proposal/Sidebar'
 import Head from 'next/head'
 
 export default function Home() {
@@ -10,9 +13,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className='font-family-georgia'> Proposal </h1>
-      </main>
+      <div className='min-w-screen max-w-screen flex'>
+        {/* Sidebar */}
+        <LayoutSidebar>
+          <Sidebar />
+        </LayoutSidebar>
+
+        {/* -------- */}
+
+        {/* Content */}
+        <LayoutContent>
+          
+        </LayoutContent>
+      </div>
     </>
   )
 }

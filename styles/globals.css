@@ -5,7 +5,6 @@
 html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    @apply p-8;
 }
 
 /* Styles for the proposal */
@@ -26,4 +25,14 @@ h5{
 }
 p{
     @apply text-base tracking-[-1%];
+}
+.text-sidebar-subtitle{
+    @apply text-sm text-gray-900/50 font-medium uppercase tracking-wide;
+}
+
+.button-sidebar-menu{
+    @apply px-4 py-2 rounded-lg text-lg text-gray-900 hover:bg-gray-50 text-left;
+}
+.button-sidebar-menu-active{
+    @apply !bg-gray-100;
 }
