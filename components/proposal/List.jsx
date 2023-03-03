@@ -9,9 +9,9 @@ export default function List({ data, type = 'points', size = 1 }) {
         flex flex-col gap-y-4 
     `}>
         { data.map((item, index) => (
-            <div 
+            <li 
                 className='list-item'
-                key={Math.random(0, 100000)}
+                key={index}
             >
                 <p 
                     className={`
@@ -21,7 +21,7 @@ export default function List({ data, type = 'points', size = 1 }) {
                 >
                     { item }
                 </p>
-            </div>
+            </li>
         ))}
     </ul>
   )

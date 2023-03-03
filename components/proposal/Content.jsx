@@ -184,11 +184,11 @@ export default function Content() {
         <Spacing height={48} />
         <List 
           data={[
-            <Fragment> <span className='font-medium'>Preparato per:</span> &nbsp; Cugini Sandri s.r.l. </Fragment>,
-            <Fragment> <span className='font-medium'>Preparato da:</span> &nbsp; Pegaso Digital Studio </Fragment>,
-            <Fragment> <span className='font-medium'>Costo totale del progetto:</span> &nbsp; 1400 € </Fragment>,
-            <Fragment> <span className='font-medium'>Tempi totali di sviluppo:</span> &nbsp; 3/6 settimane </Fragment>,
-            <Fragment> <span className='font-medium'>Servizi:</span> &nbsp; Web Design, Sviluppo web </Fragment>,
+            <Fragment key={1}> <span className='font-medium'>Preparato per:</span> &nbsp; Cugini Sandri s.r.l. </Fragment>,
+            <Fragment key={2}> <span className='font-medium'>Preparato da:</span> &nbsp; Pegaso Digital Studio </Fragment>,
+            <Fragment key={3}> <span className='font-medium'>Costo totale del progetto:</span> &nbsp; 1400 € </Fragment>,
+            <Fragment key={4}> <span className='font-medium'>Tempi totali di sviluppo:</span> &nbsp; 3/6 settimane </Fragment>,
+            <Fragment key={5}> <span className='font-medium'>Servizi:</span> &nbsp; Web Design, Sviluppo web </Fragment>,
           ]}
           type='none'
         />

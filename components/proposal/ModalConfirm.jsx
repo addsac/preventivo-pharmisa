@@ -39,8 +39,8 @@ export default function ModalConfirm() {
             <div></div>
             <List 
                 data={[
-                    <Fragment> Inviaci una mail a <a href='mailto:info@pegasodigitalstudio.com' className='font-medium hover:underline'>info@pegasodigitalstudio.com</a> </Fragment>,
-                    <Fragment> Chimaci al numero <a href='tel:3478758148' className='font-medium hover:underline'>+39 3478758148</a> </Fragment>,
+                    <Fragment key={1}> Inviaci una mail a <a href='mailto:info@pegasodigitalstudio.com' className='font-medium hover:underline'>info@pegasodigitalstudio.com</a> </Fragment>,
+                    <Fragment key={2}> Chimaci al numero <a href='tel:3478758148' className='font-medium hover:underline'>+39 3478758148</a> </Fragment>,
                 ]}
                 type='points'
                 size={2}
