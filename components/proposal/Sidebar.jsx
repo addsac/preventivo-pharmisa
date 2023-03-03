@@ -1,11 +1,15 @@
 import Button from '@/components/ui/proposal/Button'
 import { useRecoilState } from 'recoil'
 import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
+import { useState } from 'react'
 
 export default function Sidebar() {
   const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
+  const [activeMenu, setActiveMenu] = useState('1')
 
   const goToSection = (id) => {
+    setActiveMenu(id)
+
     const element = document.getElementById(id)
 
     // get the y of th element
@@ -30,43 +34,64 @@ export default function Sidebar() {
                     <div className="flex flex-col">
                         <button
                             onClick={() => goToSection('1')}
-                            className='button-sidebar-menu'
+                            className={`
+                                button-sidebar-menu
+                                ${activeMenu === '1' ? 'button-sidebar-menu-active' : ''}
+                            `}
                         >
                             Overview
                         </button>
                         <button 
                             onClick={ () => goToSection('2') }
-                            className='button-sidebar-menu'
+                            className={`
+                                button-sidebar-menu
+                                ${activeMenu === '2' ? 'button-sidebar-menu-active' : ''}
+                            `}
                         >
                             Obbiettivo
                         </button>
                         <button 
                             onClick={ () => goToSection('3') }
-                            className='button-sidebar-menu button-sidebar-menu-active'
+                            className={`
+                                button-sidebar-menu
+                                ${activeMenu === '3' ? 'button-sidebar-menu-active' : ''}
+                            `}
                         >
                             Gestione contenuti
                         </button>
                         <button 
                             onClick={ () => goToSection('4') }
-                            className='button-sidebar-menu'
+                            className={`
+                                button-sidebar-menu
+                                ${activeMenu === '4' ? 'button-sidebar-menu-active' : ''}
+                            `}
                         >
                             Tecnologie
                         </button>
                         <button 
                             onClick={ () => goToSection('5') }
-                            className='button-sidebar-menu'
+                            className={`
+                                button-sidebar-menu
+                                ${activeMenu === '5' ? 'button-sidebar-menu-active' : ''}
+                            `}
                         >
                             Prezzo
                         </button>
                         <button 
                             onClick={ () => goToSection('6') }
-                            className='button-sidebar-menu'
+                            className={`
+                                button-sidebar-menu
+                                ${activeMenu === '6' ? 'button-sidebar-menu-active' : ''}
+                            `}
                         >
                             Prossimi passi
                         </button>
                         <button 
                             onClick={ () => goToSection('7') }
-                            className='button-sidebar-menu'
+                            className={`
+                                button-sidebar-menu
+                                ${activeMenu === '7' ? 'button-sidebar-menu-active' : ''}
+                            `}
                         >
                             Domande
                         </button>
