@@ -10,8 +10,8 @@ export default function List({ data, type = 'points', size = 1 }) {
     `}>
         { data.map((item, index) => (
             <li 
-                key={'list-' + index}
                 className='list-item'
+                key={index}
             >
                 <p 
                     className={`
