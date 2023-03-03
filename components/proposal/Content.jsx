@@ -9,8 +9,12 @@ import Citation from '@/components/proposal/Citation'
 import List from '@/components/proposal/List'
 import Questions from '@/components/proposal/Questions'
 import Step from '@/components/proposal/Step'
+import { useRecoilState } from 'recoil'
+import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
 
 export default function Content() {
+  const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
+
   return (
     <div className='col-span-8 flex flex-col py-14 text-gray-900'>
         <Title 
@@ -31,6 +35,7 @@ export default function Content() {
         <ButtonGroup
           text1='Conferma preventivo'
           text2='Puoi chiamarci qui'
+          handleClick1={() => setConfirmModal(true)}
           href2='tel:3478741848'
         />
         <Spacing height={80} />

@@ -6,15 +6,15 @@ import List from '@/components/proposal/List'
 import { Fragment } from 'react'
 import Divider from '@/components/ui/proposal/Divider'
 
-
 export default function ModalConfirm() {
   const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
 
   return (
     <motion.div 
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.95 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.19, ease: 'easeInOut' }}
         class="z-50 fixed inset-0 overflow-y-scroll"
     >
         <div
