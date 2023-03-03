@@ -31,8 +31,13 @@ p{
 }
 
 .button-sidebar-menu{
-    @apply px-4 py-2 rounded-lg text-lg text-gray-900 hover:bg-gray-50 text-left;
+    @apply px-4 py-2 rounded-lg text-base text-gray-900 hover:bg-gray-50 text-left;
 }
 .button-sidebar-menu-active{
     @apply !bg-gray-100;
+}
+
+/* utility */
+.flex-center{
+    @apply flex items-center justify-center;
 }

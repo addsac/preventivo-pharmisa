@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import Button from '@/components/ui/proposal/Button'
+import { useRecoilState } from 'recoil'
+import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
 
 export default function LayoutContent({ children }) {
+  const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
+  
   return (
     <div className='relative w-full grid grid-cols-8 gap-x-6 px-8 lg:px-20 pt-[126px] lg:ml-[320px]'>
       {/* description */}
@@ -28,11 +32,12 @@ export default function LayoutContent({ children }) {
       </div>
 
       {/* button fixed on bottom for mobile */}
-      <div className="lg:hidden fixed bottom-0 border-t border-gray-200 px-8 py-4 flex items-center justify-center left-0 right-0 bg-white">
+      <div className="lg:hidden fixed bottom-0 border-t border-gray-200 px-8 py-4 flex items-center justify-center left-0 right-0 bg-white/80 backdrop-blur-xl">
         <Button 
           color='primary'
           size='base'
-          text='View contract'
+          text='Conferma preventivo'
+          handleClick={() => setConfirmModal(true)}
           iconArrow={true}
         />
       </div>

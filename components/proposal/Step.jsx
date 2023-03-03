@@ -9,12 +9,15 @@ export default function Step({ type = 'row', data =[] }) {
             ${type == 'grid' && 'gap-x-10 gap-y-20'} 
         `}
     >
-        { data.map((item) =>  (
-            <div className={`
-                flex flex-col gap-y-6 pb-10
-                ${type == 'row' && 'col-span-12 border-b border-black'}
-                ${type == 'grid' && 'col-span-6'}
-            `}>
+        { data.map((item, index) =>  (
+            <div 
+                key={index}
+                className={`
+                    flex flex-col gap-y-6 pb-10
+                    ${type == 'row' && 'col-span-12 border-b border-black'}
+                    ${type == 'grid' && 'col-span-6'}
+                `}
+            >
                 <p className='text-[32px] leading-[100%] min-w-[120px]'>
                     { item.index }
                 </p>

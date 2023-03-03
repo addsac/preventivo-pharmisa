@@ -29,9 +29,8 @@ export default function Content() {
         />
         <Spacing height={48} />
         <ButtonGroup
-          text1='View contract'
-          text2='Contact the seller'
-          href1='tel:3478741848'
+          text1='Conferma preventivo'
+          text2='Puoi chiamarci qui'
           href2='tel:3478741848'
         />
         <Spacing height={80} />

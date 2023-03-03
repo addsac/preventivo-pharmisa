@@ -1,6 +1,10 @@
 import Button from '@/components/ui/proposal/Button'
+import { useRecoilState } from 'recoil'
+import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
 
 export default function Sidebar() {
+  const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
+
   const goToSection = (id) => {
     const element = document.getElementById(id)
 
@@ -63,9 +67,10 @@ export default function Sidebar() {
                     </div>
                 </div>
                 <Button
-                    text='View contract'
+                    text='Conferma preventivo'
                     color='primary'
                     size='large'
+                    handleClick={() => setConfirmModal(true)}
                     iconArrow={true}
                 />
             </div>

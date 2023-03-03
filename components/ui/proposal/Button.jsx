@@ -1,16 +1,17 @@
 import IconArrow from '@/public/icon/proposal/arrow-right.svg'
 
-export default function Button({ color = 'primary', size = 'base', text = '', href, iconArrow = false  }) {
+export default function Button({ color = 'primary', size = 'base', text = '', href, handleClick, iconArrow = false  }) {
   return (
     <button
-        onClick={href ? () => location.href(href) : null}
+        onClick={ href ? () => location.href = href : handleClick ? handleClick : null }
         className={`
             ${color == 'primary' && 'bg-gray-900 hover:bg-gray-800 text-white'}
             ${color == 'secondary' && 'bg-gray-100 hover:bg-gray-200 text-gray-900'}
             ${size == 'base' && 'px-5 py-3'}
             ${size == 'large' && 'text-lg px-6 py-4'}
             w-full
-            flex items-center justify-between 
+            flex flex-wrap items-center justify-between 
+            gap-2
             rounded-lg
             transition duration-100
         `}
