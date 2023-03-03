@@ -12,7 +12,7 @@ export default function ProposalImage({ src = '', grid = 1 }) {
                     width={1000}
                     height={500}
                     className='w-full h-auto object-cover'
-                    alt='Proposal main Image'
+                    alt=''
                 />
             </div>
         )}

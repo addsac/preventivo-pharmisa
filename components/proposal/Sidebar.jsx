@@ -11,7 +11,7 @@ export default function Sidebar() {
     // get the y of th element
     const y = element.getBoundingClientRect().top + window.scrollY
 
-    window.scrollTo({ top: y - 128, behavior: 'smooth' })
+    window.scrollTo({ top: y - 168, behavior: 'smooth' })
   }
 
   return (
@@ -38,13 +38,19 @@ export default function Sidebar() {
                             onClick={ () => goToSection('2') }
                             className='button-sidebar-menu'
                         >
-                            Risultato
+                            Obbiettivo
                         </button>
                         <button 
-                            onClick={ () => goToSection('4') }
+                            onClick={ () => goToSection('3') }
                             className='button-sidebar-menu button-sidebar-menu-active'
                         >
                             Gestione contenuti
+                        </button>
+                        <button 
+                            onClick={ () => goToSection('4') }
+                            className='button-sidebar-menu'
+                        >
+                            Tecnologie
                         </button>
                         <button 
                             onClick={ () => goToSection('5') }
@@ -56,16 +62,10 @@ export default function Sidebar() {
                             onClick={ () => goToSection('6') }
                             className='button-sidebar-menu'
                         >
-                            Tecnologie
+                            Prossimi passi
                         </button>
                         <button 
                             onClick={ () => goToSection('7') }
-                            className='button-sidebar-menu'
-                        >
-                            Tempi di sviluppo
-                        </button>
-                        <button 
-                            onClick={ () => goToSection('8') }
                             className='button-sidebar-menu'
                         >
                             Domande

@@ -11,6 +11,7 @@ import Questions from '@/components/proposal/Questions'
 import Step from '@/components/proposal/Step'
 import { useRecoilState } from 'recoil'
 import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
+import { Fragment } from 'react'
 
 export default function Content() {
   const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
@@ -18,22 +19,23 @@ export default function Content() {
   return (
     <div className='col-span-8 flex flex-col py-14 text-gray-900'>
         <Title 
-          text='Design & Development Proposal'
+          id='1'
+          text='Sviluppo del sito web cuginisandri.it'
           size={1}
         />
         <Spacing height={48} />
         <Paragraph 
-          text="I don't like fluff or clutter; I aim to make things that resonate with people using an executional style which is honest and direct. In a digital context that means working to overcome the default distance, half-life, and impersonal nature of interactions, in order to create things that are able to sit comfortably in their digital skin whilst still being able to connect deeply with their audience. The result is something that often leans minimal in appearance, but is filled with nuance and care in all the right places."
+          text="Questo è il preventivo per lo sviluppo del nuovo sito web di cuginisandri.it, di seguito sono elencate le caratteristiche in dettaglio del progetto, le tecnologie, i tempi di sviluppo i prezzi ed altro. Invitiamo pertanto il cliente a leggere l'intera pagina web per avere una visione completa del progetto."
           size={1}
         />
         <Spacing height={48} />
         <NoteHead 
-          client='Pegaso Digital Studio'
-          author='Apple Developer Inc.'
+          client='Cugini Sandri s.r.l.'
+          author='Pegaso Digital Studio'
         />
         <Spacing height={48} />
         <ButtonGroup
-          text1='Conferma'
+          text1='Conferma preventivo'
           text2='Contattaci qui'
           handleClick1={() => setConfirmModal(true)}
           href2='tel:3478741848'
@@ -43,7 +45,210 @@ export default function Content() {
           src='/proposal/bg1.jpg'
           grid={1}
         />
+
+        <Spacing height={128} />
+
+        <Title 
+          id='2'
+          text="L'obbiettivo del progetto"
+          size={2}
+        />
+        <Spacing height={48} />
+        <Paragraph 
+          text="L'obbiettivo del progetto è costruire il nuovo sito web di cuginisandri.it, partendo dal lavoro del sito web precendente, riportando le grafiche e funzionalità necessarie a non partire da zero. Inoltre il sito web deve essere in grado di essere gestito in autonomia da un utente non tecnico, in modo da poter aggiornarne i contenuti senza intervento di un tecnico."
+          size={1}
+        />
+        <Spacing height={48} />
+        <Table 
+          rows={[
+            {
+              text1: 'Modifiche sul design',
+              text2: '1-2 settimane',
+              description: 'Saranno presenti alcune modifiche al design del sito web, ma in generale sarà molto simile al sito web attuale.'
+            },
+            {
+              text1: 'Sviluppo del sito web',
+              text2: '2-4 settimane',
+              description: 'Il sito verrà svilippato con tecnologie moderne che permettono di avere un sito web veloce e sicuro.'
+            },
+          ]}
+          finalRows={[
+            {
+              text1: 'Tempo totale',
+              text2: '3-6 settimane',
+              description: ''
+            },
+          ]}
+        />
+
+        <Spacing height={128} />
+
+        <Title 
+          id='3'
+          text="Gestione dei contenuti in autonomia"
+          size={2}
+        />
+        <Spacing height={48} />
+        <Paragraph 
+          text="I contenuti del sito (testi principali, immagini, descrizioni dei prodotti, contatti...) saranno gestiti con un software cms esterno chiamato Contentful. È uno strumento gratuito e quello più facile da far utilizzare ad una persona non abituata ad usate questo tipo di strumenti."
+          size={1}
+        />
+        <Spacing height={48} />
+        <Citation 
+          title='Nota sulle sezioni modificabili in autonomia:'
+          description="Le sezioni modificabili in autonomia devono essere scelte in base alle neccessità del progetto e alla volontà del cliente. Inquesti casi si rendono modificabile i contenuti che possono cambiare nel tempon ,on ogni piccolo dettaglio del sito, allos copo di aumentare la semplicità di gestione per il cliente."
+        />
         <Spacing height={80} />
+        <ProposalImage 
+          src='/proposal/contentful.jpg'
+          grid={1}
+        />
+
+        <Spacing height={128} />
+
+        <Title 
+          id='4'
+          text="Tecnologie utilizzate"
+          size={2}
+        />
+        <Spacing height={48} />
+        <Paragraph 
+          text="Utilizziamo le tecnologie per lo sviluppo del progetto che riteniamo migliori per ogni progetto, in modo da avere un sito web veloce, sicuro e affidabile. In questo caso il sito web sarà sviluppato con Next.js, un framework per lo sviluppo di siti web in React.js. Il sito web sarà hostato su Vercel, un servizio di hosting per siti web che permette di avere un sito web veloce e affidabile. Tutte le altre tecnologie sono elencate di seguito."
+          size={1}
+        />
+        <Spacing height={48} />
+        <Table 
+          rows={[
+            {
+              text1: 'React',
+              text2: 'Libreria per lo sviluppo javascript',
+              description: '',
+            },
+            {
+              text1: 'Next.js',
+              text2: 'Framework per lo sviluppo di siti web',
+              description: '',
+            },
+            {
+              text1: 'Tailwind',
+              text2: 'Libreria per lo stile dei siti web',
+              description: '',
+            },
+            {
+              text1: 'Vercel',
+              text2: 'Hosting per siti web',
+              description: '',
+            },
+            {
+              text1: 'Framer motion',
+              text2: 'Libreria per le animazioni',
+              description: '',
+            },
+          ]}
+        />
+
+        <Spacing height={128} />
+
+        <Title 
+          id='5'
+          text="Prezzo del progetto"
+          size={2}
+        />
+        <Spacing height={48} />
+        <Paragraph 
+          text="Il prezzo del progetto è di 1.400 € iva esclusa, include le modifiche al design del progetto, il suo sviluppo completa, la messa online, e la possibilità di modificare i contenuti in autonomia. Il costo di assistenza per la gestione del dominio e dell'hosting è a carico dell'agenzia e costa 200 € / anno. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di assistenza (che comprende gestione completa dell'agenzia del  dominio e hosting) sarà addebitato ogni inizio dell'anno."
+          size={1}
+        />
+        <Spacing height={48} />
+        <Table 
+          rows={[
+            {
+              text1: 'Sviluppo completo del sito',
+              text2: '1.400 € (iva esc.)',
+              description: '',
+            },
+            {
+              text1: 'Canone di assistenza annuo',
+              text2: '200 € / anno (iva esc.)',
+              description: 'Che comprende la gestione del dominio e dell\'hosting del sito web',
+            },
+          ]}
+        />
+
+        <Spacing height={128} />
+
+        <Title 
+          text="Overview"
+          size={2}
+        />
+        <Spacing height={48} />
+        <List 
+          data={[
+            <Fragment> <span className='font-medium'>Preparato per:</span> &nbsp; Cugini Sandri s.r.l. </Fragment>,
+            <Fragment> <span className='font-medium'>Preparato da:</span> &nbsp; Pegaso Digital Studio </Fragment>,
+            <Fragment> <span className='font-medium'>Costo totale del progetto:</span> &nbsp; 1400 € </Fragment>,
+            <Fragment> <span className='font-medium'>Tempi totali di sviluppo:</span> &nbsp; 3/6 settimane </Fragment>,
+            <Fragment> <span className='font-medium'>Servizi:</span> &nbsp; Web Design, Sviluppo web </Fragment>,
+          ]}
+          type='none'
+        />
+
+        <Spacing height={128} />
+        
+        <Title 
+          id='6'
+          text="Prossimi passi"
+          size={2}
+        />
+        <Spacing height={48} />
+        <List 
+          data={[
+            'Conferma il progetto via email o telefono se sei pronto per iniziare il progetto.',
+            'Partiremmo con la fase di design, dove ci troveremo per discutere delle modifiche necessarie.',
+            'Quando ci saranno progressi nel progetto ci sentiremo via email o direttamente via telefono.',
+          ]}
+          type='ordered'
+        />
+
+        <Spacing height={80} />
+
+        <ButtonGroup
+          text1='Conferma preventivo'
+          text2='Contattaci qui'
+          handleClick1={() => setConfirmModal(true)}
+          href2='tel:3478741848'
+        />
+
+        <Spacing height={128} />
+
+        <Title 
+          id='7'
+          text="Domande frequenti"
+          size={2}
+        />
+        <Spacing height={80} />
+        <Questions 
+          data={[
+            {
+              question: 'Le modifiche sono incluse nel prezzo?',
+              answer: 'Le piccole modifiche che non richiedono tempo sono incluse nel prezzo anche dopo la pubblicazione online del sito. Se ci dovessero essere modifiche più grandi dopo la messa online del sito, ti contatteremo per un preventivo.'
+            },
+            {
+              question: 'Come posso pagare?',
+              answer: 'Il pagamento verrà effetuato tramite bonifico bancario. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di assistenza (che comprende gestione completa dell\'agenzia del  dominio e hosting) sarà addebitato ogni inizio dell\'anno.'
+            },
+            {
+              question: 'Quali saranno i modi per comunicare durante il progetto?',
+              answer: 'Comunicheremo via email, telefono e fisicamente al negozio Pegaso Informatica.'
+            },
+            {
+              question: 'Dove ci si troverà per lo sviluppo del progetto?',
+              answer: 'Ci troveremo al negozio Pegaso Informatica, in via Dante 56, 35014 Fontaniva (PD).'
+            }
+          ]}
+        />
+
+        {/* 
         <Citation 
           title='The details of the text above here:'
           description="I don't like fluff or clutter; I aim to make things that resonate with people using an executional style which is honest and direct. In a digital context that means working to overcome the default distance, half-life, and impersonal nature of interactions."
@@ -132,7 +337,7 @@ export default function Content() {
             }
           ]}
           type='grid'
-        />
+        /> */}
 
     </div>
   )

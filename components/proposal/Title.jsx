@@ -1,6 +1,8 @@
-export default function Title({ size = 1, text = '' }) {
+export default function Title({ id, size = 1, text = '' }) {
   return (
-    <>
+    <div 
+        id={id ? id : ''}
+    >
         { size == 1 && (
             <h1>
                 { text }
@@ -21,6 +23,6 @@ export default function Title({ size = 1, text = '' }) {
                 { text }
             </h5>
         )}        
-    </>
+    </div>
   )
 }

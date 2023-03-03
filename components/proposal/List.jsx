@@ -1,11 +1,12 @@
-// type = 'points' | 'ordered'
+// type = 'points' | 'ordered' | 'none'
 
 export default function List({ data, type = 'points', size = 1 }) {
   return (
     <ul className={`
-        ${type === 'ordered' && 'list-decimal'}
-        ${type === 'points' && 'list-disc'}
-        flex flex-col gap-y-4 ml-4
+        ${type === 'ordered' && 'list-decimal ml-4'}
+        ${type === 'points' && 'list-disc ml-4'}
+        ${type === 'none' && 'list-none'}
+        flex flex-col gap-y-4 
     `}>
         { data.map((item, index) => (
             <li 

@@ -7,6 +7,7 @@ export default function Spacing({ height, id = '' }) {
                 ${height == 24 && 'h-6'}
                 ${height == 48 && 'h-12'}
                 ${height == 80 && 'h-20'}
+                ${height == 128 && 'h-32'}
             `}
         />
     )

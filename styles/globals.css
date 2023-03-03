@@ -9,7 +9,7 @@ html {
 
 /* Styles for the proposal */
 h1{
-    @apply text-6xl leading-[120%] tracking-[-1.3px] font-medium;
+    @apply text-6xl leading-[120%] tracking-[-1.4px] font-medium;
 }
 h2{
     @apply text-5xl leading-[120%] tracking-[-1px] font-medium;
