@@ -17,7 +17,7 @@ export default function Sidebar() {
   return (
     <>
         {/* menu */}
-        <div className='flex flex-col'>
+        <div className='sticky top-0 flex flex-col'>
             <div className="w-full h-[48px]"></div> {/* space for the header */}
 
             {/* Navigation */}
@@ -38,31 +38,37 @@ export default function Sidebar() {
                             onClick={ () => goToSection('2') }
                             className='button-sidebar-menu'
                         >
-                            Project goals
-                        </button>
-                        <button
-                            onClick={ () => goToSection('3') }
-                            className='button-sidebar-menu'
-                        >
-                            Delivereables
+                            Risultato
                         </button>
                         <button 
                             onClick={ () => goToSection('4') }
                             className='button-sidebar-menu button-sidebar-menu-active'
                         >
-                            Pricing
+                            Gestione contenuti
                         </button>
                         <button 
                             onClick={ () => goToSection('5') }
                             className='button-sidebar-menu'
                         >
-                            Timeline and process
+                            Prezzo
                         </button>
                         <button 
                             onClick={ () => goToSection('6') }
                             className='button-sidebar-menu'
                         >
-                            Next steps
+                            Tecnologie
+                        </button>
+                        <button 
+                            onClick={ () => goToSection('7') }
+                            className='button-sidebar-menu'
+                        >
+                            Tempi di sviluppo
+                        </button>
+                        <button 
+                            onClick={ () => goToSection('8') }
+                            className='button-sidebar-menu'
+                        >
+                            Domande
                         </button>
                     </div>
                 </div>

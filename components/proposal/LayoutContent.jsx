@@ -7,7 +7,7 @@ export default function LayoutContent({ children }) {
   const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
   
   return (
-    <div className='relative w-full grid grid-cols-8 gap-x-6 px-8 lg:px-20 pt-[126px] lg:ml-[320px]'>
+    <div className='relative w-full grid grid-cols-8 gap-x-6 px-8 lg:px-20 pt-[126px]'>
       {/* description */}
       <div className='fixed top-0 h-[96px] lg:h-[126px] left-0 right-0 pl-8 pr-8 lg:pr-20 flex items-center justify-between border-b border-gray-200 bg-white/80 backdrop-blur-xl'>
         {/* Logo */}
@@ -22,11 +22,11 @@ export default function LayoutContent({ children }) {
         </div>
 
         <div className="flex flex-col gap-0.5 text-right text-gray-900">
-          <p className="font-medium">
-            Apple Website Proposal
+          <p className="text-sm lg:text-base font-medium">
+            Preventivo Cuginisandri
           </p>
           <p className="text-sm font-medium opacity-50 tracking-[-0.1px]">
-            This site is confidential
+            Questo sito è riservato
           </p>
         </div>
       </div>

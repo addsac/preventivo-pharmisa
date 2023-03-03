@@ -33,15 +33,15 @@ export default function Content() {
         />
         <Spacing height={48} />
         <ButtonGroup
-          text1='Conferma preventivo'
-          text2='Puoi chiamarci qui'
+          text1='Conferma'
+          text2='Contattaci qui'
           handleClick1={() => setConfirmModal(true)}
           href2='tel:3478741848'
         />
         <Spacing height={80} />
         <ProposalImage 
-          src=''
-          grid={2}
+          src='/proposal/bg1.jpg'
+          grid={1}
         />
         <Spacing height={80} />
         <Citation 

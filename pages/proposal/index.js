@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='relative min-w-screen max-w-screen flex'>
+      <div className='relative min-w-screen flex'>
         {/* Sidebar */}
         <LayoutSidebar>
           <Sidebar />
