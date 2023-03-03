@@ -1,7 +1,10 @@
 import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
 import { useRecoilState } from 'recoil'
 import { motion } from 'framer-motion'
-import Paragraph from './Paragraph'
+import Paragraph from '@/components/proposal/Paragraph'
+import List from '@/components/proposal/List'
+import { Fragment } from 'react'
+import Divider from '@/components/ui/proposal/Divider'
 
 
 export default function ModalConfirm() {
@@ -28,8 +31,19 @@ export default function ModalConfirm() {
                 </button>
             </div>
             <Paragraph
-                text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae aliquam lacinia, nisl nisl aliquet nisl, nec aliquam nisl nisl sit amet lorem. Sed euismod, nisl vitae aliquam lacinia, nisl nisl aliquet nisl, nec aliquam nisl nisl sit amet lorem.'
+                text='Per confermare il preventivo contattaci ai seguenti link indicati qui sotto. Includi alla mail il nome della tua azienda e il link di questo preventivo.'
                 size={3}
+            />
+            <div></div>
+            <Divider theme='light' />
+            <div></div>
+            <List 
+                data={[
+                    <Fragment> Inviaci una mail a <a href='mailto:info@pegasodigitalstudio.com' className='font-medium hover:underline'>info@pegasodigitalstudio.com</a> </Fragment>,
+                    <Fragment> Chimaci al numero <a href='tel:3478758148' className='font-medium hover:underline'>+39 3478758148</a> </Fragment>,
+                ]}
+                type='points'
+                size={2}
             />
         </div>
     </motion.div>

@@ -1,4 +1,6 @@
-export default function List({ data, type = 'points' }) {
+// type = 'points' | 'ordered'
+
+export default function List({ data, type = 'points', size = 1 }) {
   return (
     <ul className={`
         ${type === 'ordered' && 'list-decimal'}
@@ -10,7 +12,12 @@ export default function List({ data, type = 'points' }) {
                 key={index}
                 className='list-item'
             >
-                <p className='text-lg'>
+                <p 
+                    className={`
+                        ${size == 1 && 'text-lg'}
+                        ${size == 2 && 'text-base'}
+                    `}
+                >
                     { item }
                 </p>
             </li>
