@@ -11,7 +11,7 @@ export default function List({ data, type = 'points', size = 1 }) {
         { data.map((item, index) => (
             <div 
                 className='list-item'
-                key={index}
+                key={Math.random(0, 100000)}
             >
                 <p 
                     className={`
