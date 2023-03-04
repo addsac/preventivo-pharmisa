@@ -71,7 +71,7 @@ export default function Dropdown({ array = [], size = 'base' }) {
       >
         {/* text */}
         <p className='whitespace-nowrap'>
-          { activeText.length > 14 ? activeText.slice(0, 14) + '...' : activeText }
+          { activeText.length > 10 ? activeText.slice(0, 10) + '...' : activeText }
         </p>
 
         {/* icon */}
