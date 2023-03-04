@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Button from '@/components/ui/proposal/Button'
 import { useRecoilState } from 'recoil'
 import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
+import Dropdown from '@/components/ui/proposal/Dropdown'
 
 export default function LayoutContent({ children }) {
   const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
@@ -33,10 +34,14 @@ export default function LayoutContent({ children }) {
 
       {/* button fixed on bottom for mobile */}
       <div className="lg:hidden fixed bottom-0 border-t border-gray-200 px-8 py-4 flex items-center justify-between gap-x-4 left-0 right-0 bg-white/80 backdrop-blur-xl">
+        <Dropdown 
+          array={['Overview', 'Obbiettivo', 'Gestione contenuti', 'Tecnologie', 'Prezzo', 'Prossimi passi', 'Domande']}
+          size='base'
+        />
         <Button 
           color='primary'
           size='base'
-          text='Conferma preventivo'
+          text='Conferma'
           handleClick={() => setConfirmModal(true)}
           iconArrow={true}
         />
