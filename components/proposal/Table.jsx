@@ -17,12 +17,12 @@ export default function Table({ rows = [], finalRows = [] }) {
                 <div 
                     key={row.title1 + '-' + index} 
                     className={`
-                        flex items-start justify-between p-6 gap-x-10 
+                        flex flex-col p-6 gap-x-10 gap-y-3
                         ${finalRows.length == 0 && rows.length == index + 1 ? '' : 'border-b border-black'} 
                         hover:bg-gray-50 transition duration-100
                     `}
                 >
-                    <div className="flex flex-col gap-y-4">
+                    <div className="flex items-start justify-between gap-y-4">
                         {/* <p className="text-lg">
                             { row.text1 }
                         </p> */}
@@ -30,18 +30,18 @@ export default function Table({ rows = [], finalRows = [] }) {
                             text={ row.text1 }
                             size={2}
                         />
-                        { row.description != '' && (
-                            <Paragraph 
-                                text={ row.description }
-                                size={3}
-                            />
-                        )}
+                        <Paragraph 
+                            text={ row.text2 }
+                            size={2}
+                            shrink={false}
+                        />  
                     </div>
-                    <Paragraph 
-                        text={ row.text2 }
-                        size={2}
-                        shrink={false}
-                    />
+                    { row.description != '' && (
+                        <Paragraph 
+                            text={ row.description }
+                            size={3}
+                        />
+                    )}
                 </div>
             ))}
 

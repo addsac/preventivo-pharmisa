@@ -1,15 +1,17 @@
+import { activeMenuState } from '@/store/proposal/atom/ActiveMenuAtom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDetectClickOutside } from 'react-detect-click-outside'
+import { useRecoilState } from 'recoil'
 
 export default function Dropdown({ array = [], size = 'base' }) {
   const [boolModal, setBoolModal] = useState(false)
-  const [activeText, setActivetext] = useState(array[0])
+  const [activeText, setActiveText] = useState(array[0])
 
   const ref = useDetectClickOutside({ onTriggered: () => {setBoolModal(false)} });
 
   const dropClicked = (item, index) => {
-    setActivetext(item)
+    // setActiveText(item)
     goToSection(index + 1)
     setBoolModal(false)
   }
@@ -22,6 +24,14 @@ export default function Dropdown({ array = [], size = 'base' }) {
 
     window.scrollTo({ top: y - 168, behavior: 'smooth' })
   }
+
+  // change the active link base on the store
+  const [activeMenuStore] = useRecoilState(activeMenuState)
+
+  useEffect(() => {
+    const string = array[activeMenuStore - 1]
+    setActiveText(string)
+  }, [activeMenuStore])
 
   return (
     <div 
@@ -70,9 +80,22 @@ export default function Dropdown({ array = [], size = 'base' }) {
       `}
       >
         {/* text */}
-        <p className='whitespace-nowrap'>
-          { activeText.length > 10 ? activeText.slice(0, 10) + '...' : activeText }
-        </p>
+        <AnimatePresence mode='wait'>
+          <motion.div
+              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -10 }}
+              exit={{ opacity: 0, x: 10 }}
+              transition={{ type: 'spring', stiffness: 500, damping: 30, mass: 0.5 }}
+              key={activeText}
+              className='whitespace-nowrap'
+            >
+              { activeText.length > 10 ? (
+                  activeText.slice(0, 10) + '...'
+              ) : (
+                  activeText
+              )}
+            </motion.div>
+        </AnimatePresence>
 
         {/* icon */}
         {size == 'base' && (

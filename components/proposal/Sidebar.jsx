@@ -1,15 +1,16 @@
 import Button from '@/components/ui/proposal/Button'
 import { useRecoilState } from 'recoil'
 import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { activeMenuState } from '@/store/proposal/atom/ActiveMenuAtom'
 
 export default function Sidebar() {
   const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
   const [activeMenu, setActiveMenu] = useState('1')
+  
+  const [arrayLinks] = useState(['Overview', 'Obbiettivo', 'Gestione contenuti', 'Tecnologie', 'Prezzo', 'Prossimi passi', 'Domande'])
 
   const goToSection = (id) => {
-    setActiveMenu(id)
-
     const element = document.getElementById(id)
 
     // get the y of th element
@@ -17,6 +18,46 @@ export default function Sidebar() {
 
     window.scrollTo({ top: y - 168, behavior: 'smooth' })
   }
+
+  /* set the active menu on scroll */
+  const [activeMenuStore, setActiveMenuStore] = useRecoilState(activeMenuState)
+
+  let observerConfig = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1.0,
+  }
+
+  function observerFn(entries, observer) {
+      entries.map(entry => {
+        if(entry.isIntersecting) {
+            setActiveMenuStore(String(entry.target.id))
+        }
+      })
+  }
+
+  useEffect(() => {
+    setActiveMenu(activeMenuStore)
+  }, [activeMenuStore])
+
+  useEffect(() => {
+        // set the active menu on scroll
+        let observer = new IntersectionObserver(observerFn, observerConfig)
+
+        const ids = [1, 2, 3, 4, 5, 6, 7]
+
+        ids.map((id) => {
+            const el = document.getElementById(String(id))
+            observer.observe(el)
+        })
+    
+        return () => {
+            ids.map((id) => {
+                const el = document.getElementById(String(id))
+                observer.unobserve(el)
+            })
+        }
+  }, [])
 
   return (
     <>
@@ -32,69 +73,17 @@ export default function Sidebar() {
                     </p>
 
                     <div className="flex flex-col">
-                        <button
-                            onClick={() => goToSection('1')}
-                            className={`
-                                button-sidebar-menu
-                                ${activeMenu === '1' ? 'button-sidebar-menu-active' : ''}
-                            `}
-                        >
-                            Overview
-                        </button>
-                        <button 
-                            onClick={ () => goToSection('2') }
-                            className={`
-                                button-sidebar-menu
-                                ${activeMenu === '2' ? 'button-sidebar-menu-active' : ''}
-                            `}
-                        >
-                            Obbiettivo
-                        </button>
-                        <button 
-                            onClick={ () => goToSection('3') }
-                            className={`
-                                button-sidebar-menu
-                                ${activeMenu === '3' ? 'button-sidebar-menu-active' : ''}
-                            `}
-                        >
-                            Gestione contenuti
-                        </button>
-                        <button 
-                            onClick={ () => goToSection('4') }
-                            className={`
-                                button-sidebar-menu
-                                ${activeMenu === '4' ? 'button-sidebar-menu-active' : ''}
-                            `}
-                        >
-                            Tecnologie
-                        </button>
-                        <button 
-                            onClick={ () => goToSection('5') }
-                            className={`
-                                button-sidebar-menu
-                                ${activeMenu === '5' ? 'button-sidebar-menu-active' : ''}
-                            `}
-                        >
-                            Prezzo
-                        </button>
-                        <button 
-                            onClick={ () => goToSection('6') }
-                            className={`
-                                button-sidebar-menu
-                                ${activeMenu === '6' ? 'button-sidebar-menu-active' : ''}
-                            `}
-                        >
-                            Prossimi passi
-                        </button>
-                        <button 
-                            onClick={ () => goToSection('7') }
-                            className={`
-                                button-sidebar-menu
-                                ${activeMenu === '7' ? 'button-sidebar-menu-active' : ''}
-                            `}
-                        >
-                            Domande
-                        </button>
+                        {arrayLinks.map((text, index) => (
+                            <button
+                                onClick={() => goToSection(String(index + 1))}
+                                className={`
+                                    button-sidebar-menu
+                                    ${activeMenu === String(index + 1) ? 'button-sidebar-menu-active' : ''}
+                                `}
+                            >
+                                { text }
+                            </button>
+                        ))}
                     </div>
                 </div>
                 <Button

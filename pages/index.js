@@ -3,13 +3,15 @@ import LayoutContent from '@/components/proposal/LayoutContent'
 import Sidebar from '@/components/proposal/Sidebar'
 import Content from '@/components/proposal/Content'
 import ModalConfirm from '@/components/proposal/ModalConfirm'
-import { useRecoilState } from 'recoil'
 import { confirmModalState } from '@/store/proposal/atom/ConfirmAtom'
-import Head from 'next/head'
+import { useRecoilState } from 'recoil'
 import { AnimatePresence } from 'framer-motion'
+import Head from 'next/head'
+import { useEffect } from 'react'
 
 export default function Home() {
   const [confirmModal] = useRecoilState(confirmModalState)
+  
   return (
     <>
       <Head>

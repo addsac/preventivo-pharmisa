@@ -1,6 +1,6 @@
 import { atom } from 'recoil'
 
 export const confirmModalState = atom({
-    key: 'confirmModalState',
+    key: 'confirmModalStateKey',
     default: false,
 })
