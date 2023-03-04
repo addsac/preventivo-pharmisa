@@ -32,7 +32,7 @@ export default function LayoutContent({ children }) {
       </div>
 
       {/* button fixed on bottom for mobile */}
-      <div className="lg:hidden fixed bottom-0 border-t border-gray-200 px-8 py-4 flex items-center justify-center left-0 right-0 bg-white/80 backdrop-blur-xl">
+      <div className="lg:hidden fixed bottom-0 border-t border-gray-200 px-8 py-4 flex items-center justify-between gap-x-4 left-0 right-0 bg-white/80 backdrop-blur-xl">
         <Button 
           color='primary'
           size='base'
