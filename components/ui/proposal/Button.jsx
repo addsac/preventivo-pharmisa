@@ -27,7 +27,15 @@ export default function Button({ color = 'primary', size = 'base', text = '', hr
                     stroke-[1.5]
                 `}
             >
-                <IconArrow />
+                <svg
+                    width="currentWidth" height="currentHeight" viewBox="0 0 22 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                    <path
+                        d="M0.640137 7.15385H20.3324M20.3324 7.15385L13.8709 1M20.3324 7.15385L14.1786 13"
+                        stroke="currentColor"
+                    />
+                </svg>
             </span>
         )}
     </button>
