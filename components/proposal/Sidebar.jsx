@@ -57,7 +57,7 @@ export default function Sidebar() {
                 observer.unobserve(el)
             })
         }
-  }, [])
+  }, [observerConfig, observerFn])
 
   return (
     <>

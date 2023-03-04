@@ -31,7 +31,7 @@ export default function Dropdown({ array = [], size = 'base' }) {
   useEffect(() => {
     const string = array[activeMenuStore - 1]
     setActiveText(string)
-  }, [activeMenuStore])
+  }, [activeMenuStore, array])
 
   return (
     <div 
