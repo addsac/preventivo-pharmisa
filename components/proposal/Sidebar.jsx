@@ -75,6 +75,7 @@ export default function Sidebar() {
                     <div className="flex flex-col">
                         {arrayLinks.map((text, index) => (
                             <button
+                                key={'button-sidebar-' + text.replace(' ', '-')}
                                 onClick={() => goToSection(String(index + 1))}
                                 className={`
                                     button-sidebar-menu
