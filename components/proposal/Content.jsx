@@ -156,7 +156,7 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="Il prezzo del progetto è di 1.400 € iva esclusa, include le modifiche al design del progetto, il suo sviluppo, la messa online, e la possibilità di modificare i contenuti in autonomia. Il costo di gestione per la gestione del dominio e dell'hosting è a carico dell'agenzia e costa 200 € / anno. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di gestione (che comprende gestione completa dell'agenzia del  dominio e hosting) sarà addebitato ad ogni rinnovo del dominio (1 volta all'anno)."
+          text="Il prezzo del progetto è di 1.400 € iva esclusa, include le modifiche al design del progetto, il suo sviluppo, la messa online, e la possibilità di modificare i contenuti in autonomia. Il costo di gestione per la gestione del dominio e dell'hosting costa 200 € / anno. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di gestione (che comprende gestione completa dell'agenzia del  dominio e hosting) sarà addebitato ad ogni rinnovo del dominio (1 volta all'anno)."
           size={1}
         />
         <Spacing height={48} />

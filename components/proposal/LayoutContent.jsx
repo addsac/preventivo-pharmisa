@@ -42,6 +42,7 @@ export default function LayoutContent({ children }) {
           color='primary'
           size='base'
           text='Conferma'
+          shrink={0}
           handleClick={() => setConfirmModal(true)}
           iconArrow={true}
         />
