@@ -19,7 +19,7 @@ export default function Button({ color = 'primary', size = 'base', text = '', hr
         </p>
         { iconArrow && (
             <>
-                ${size == 'base' && (
+                {size == 'base' && (
                     <svg
                         width="auto" height="12px" viewBox="0 0 22 14" fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ export default function Button({ color = 'primary', size = 'base', text = '', hr
                     </svg>
                 )}
                 
-                ${size == 'large' && (
+                {size == 'large' && (
                     <svg
                         width="auto" height="16px" viewBox="0 0 22 14" fill="none"
                         xmlns="http://www.w3.org/2000/svg"
