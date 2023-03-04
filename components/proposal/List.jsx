@@ -1,5 +1,7 @@
 // type = 'points' | 'ordered' | 'none'
 
+import Paragraph from '@/components/proposal/Paragraph'
+
 export default function List({ data, type = 'points', size = 1 }) {
   return (
     <ul className={`
@@ -13,14 +15,10 @@ export default function List({ data, type = 'points', size = 1 }) {
                 className='list-item'
                 key={index}
             >
-                <p 
-                    className={`
-                        ${size == 1 && 'text-lg'}
-                        ${size == 2 && 'text-base'}
-                    `}
-                >
-                    { item }
-                </p>
+                <Paragraph 
+                    text={item}
+                    size={size == 1 ? 2 : size == 2 ? 3 : 1}
+                />
             </li>
         ))}
     </ul>

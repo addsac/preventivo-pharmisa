@@ -8,6 +8,8 @@
     ...
 ] */
 
+import Paragraph from '@/components/proposal/Paragraph'
+
 export default function Table({ rows = [], finalRows = [] }) {
     return (
         <div className="border border-black flex flex-col">
@@ -21,16 +23,25 @@ export default function Table({ rows = [], finalRows = [] }) {
                     `}
                 >
                     <div className="flex flex-col gap-y-4">
-                        <p className="text-lg">
+                        {/* <p className="text-lg">
                             { row.text1 }
-                        </p>
+                        </p> */}
+                        <Paragraph 
+                            text={ row.text1 }
+                            size={2}
+                        />
                         { row.description != '' && (
-                            <p className="text-base leading-[170%]"> { row.description } </p>
+                            <Paragraph 
+                                text={ row.description }
+                                size={3}
+                            />
                         )}
                     </div>
-                    <p className='shrink-0 text-lg'>
-                        { row.text2 }
-                    </p>
+                    <Paragraph 
+                        text={ row.text2 }
+                        size={2}
+                        shrink={false}
+                    />
                 </div>
             ))}
 

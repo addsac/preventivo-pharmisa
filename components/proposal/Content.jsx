@@ -17,7 +17,7 @@ export default function Content() {
   const [confirmModal, setConfirmModal] = useRecoilState(confirmModalState)
 
   return (
-    <div className='col-span-8 flex flex-col py-14 text-gray-900'>
+    <div className='col-span-8 flex flex-col pt-14 pb-32 text-gray-900'>
         <Title 
           id='1'
           text='Sviluppo del sito web cuginisandri.it'
@@ -35,8 +35,8 @@ export default function Content() {
         />
         <Spacing height={48} />
         <ButtonGroup
-          text1='Conferma preventivo'
-          text2='Contattaci qui'
+          text1='Conferma'
+          text2='Contattaci'
           handleClick1={() => setConfirmModal(true)}
           href2='tel:3478741848'
         />
@@ -121,27 +121,27 @@ export default function Content() {
           rows={[
             {
               text1: 'React',
-              text2: 'Libreria per lo sviluppo javascript',
+              text2: 'Libreria javascript',
               description: '',
             },
             {
               text1: 'Next.js',
-              text2: 'Framework per lo sviluppo di siti web',
+              text2: 'Framework di sviluppo',
               description: '',
             },
             {
               text1: 'Tailwind',
-              text2: 'Libreria per lo stile dei siti web',
+              text2: 'Libreria di stile',
               description: '',
             },
             {
               text1: 'Vercel',
-              text2: 'Hosting per siti web',
+              text2: 'Piattaform hosting',
               description: '',
             },
             {
               text1: 'Framer motion',
-              text2: 'Libreria per le animazioni',
+              text2: 'Libreria di animazioni',
               description: '',
             },
           ]}
@@ -164,15 +164,20 @@ export default function Content() {
           rows={[
             {
               text1: 'Sviluppo completo del sito',
-              text2: '1.400 € (iva esc.)',
+              text2: '1.400 €',
               description: '',
             },
             {
               text1: 'Canone di assistenza annuo',
-              text2: '200 € / anno (iva esc.)',
+              text2: '200 € / anno',
               description: 'Che comprende la gestione del dominio e dell\'hosting del sito web',
             },
           ]}
+        />
+        <Spacing height={24} />
+        <Paragraph 
+          text="Tutti i prezzi sono da intendersi esclusi IVA."
+          size={3}
         />
 
         <Spacing height={128} />
@@ -213,8 +218,8 @@ export default function Content() {
         <Spacing height={80} />
 
         <ButtonGroup
-          text1='Conferma preventivo'
-          text2='Contattaci qui'
+          text1='Conferma'
+          text2='Contattaci'
           handleClick1={() => setConfirmModal(true)}
           href2='tel:3478741848'
         />
@@ -226,7 +231,7 @@ export default function Content() {
           text="Domande frequenti"
           size={2}
         />
-        <Spacing height={80} />
+        <Spacing height={48} />
         <Questions 
           data={[
             {
