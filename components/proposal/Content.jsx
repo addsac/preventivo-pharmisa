@@ -90,13 +90,13 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="I contenuti del sito (testi principali, immagini, descrizioni dei prodotti, contatti...) saranno gestiti con un software cms esterno chiamato Contentful. È uno strumento gratuito e quello più facile da far utilizzare ad una persona non abituata ad usate questo tipo di strumenti."
+          text="I contenuti del sito (testi principali, immagini, descrizioni dei prodotti, contatti...) saranno gestiti con un software cms esterno chiamato Contentful. È uno strumento gratuito e facile da far utilizzare anche da una persona non abituata ad usate questo tipo di strumenti."
           size={1}
         />
         <Spacing height={48} />
         <Citation 
           title='Nota sulle sezioni modificabili in autonomia:'
-          description="Le sezioni modificabili in autonomia devono essere scelte in base alle neccessità del progetto e alla volontà del cliente. Inquesti casi si rendono modificabile i contenuti che possono cambiare nel tempon ,on ogni piccolo dettaglio del sito, allos copo di aumentare la semplicità di gestione per il cliente."
+          description="Le sezioni modificabili in autonomia devono essere scelte in base alle neccessità del progetto e alla volontà del cliente. In questi casi si rendono modificabile i contenuti che possono cambiare nel tempon ,on ogni piccolo dettaglio del sito, allo scopo di aumentare la semplicità di gestione per il cliente."
         />
         <Spacing height={80} />
         <ProposalImage 
@@ -156,7 +156,7 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="Il prezzo del progetto è di 1.400 € iva esclusa, include le modifiche al design del progetto, il suo sviluppo completa, la messa online, e la possibilità di modificare i contenuti in autonomia. Il costo di assistenza per la gestione del dominio e dell'hosting è a carico dell'agenzia e costa 200 € / anno. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di assistenza (che comprende gestione completa dell'agenzia del  dominio e hosting) sarà addebitato ogni inizio dell'anno."
+          text="Il prezzo del progetto è di 1.400 € iva esclusa, include le modifiche al design del progetto, il suo sviluppo, la messa online, e la possibilità di modificare i contenuti in autonomia. Il costo di gestione per la gestione del dominio e dell'hosting è a carico dell'agenzia e costa 200 € / anno. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di gestione (che comprende gestione completa dell'agenzia del  dominio e hosting) sarà addebitato ad ogni rinnovo del dominio (1 volta all'anno)."
           size={1}
         />
         <Spacing height={48} />
@@ -168,7 +168,7 @@ export default function Content() {
               description: '',
             },
             {
-              text1: 'Canone di assistenza annuo',
+              text1: 'Canone di gestione annuo',
               text2: '200 € / anno',
               description: 'Che comprende la gestione del dominio e dell\'hosting del sito web',
             },
@@ -240,7 +240,7 @@ export default function Content() {
             },
             {
               question: 'Come posso pagare?',
-              answer: 'Il pagamento verrà effetuato tramite bonifico bancario. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di assistenza (che comprende gestione completa dell\'agenzia del  dominio e hosting) sarà addebitato ogni inizio dell\'anno.'
+              answer: 'Il pagamento verrà effetuato tramite bonifico bancario. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di gestione (che comprende gestione completa dell\'agenzia del  dominio e hosting) sarà addebitato ogni inizio dell\'anno.'
             },
             {
               question: 'Quali saranno i modi per comunicare durante il progetto?',
