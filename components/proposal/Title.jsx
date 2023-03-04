@@ -1,6 +1,6 @@
 export default function Title({ id, size = 1, text = '' }) {
     return (
-        <div id={id ? id : ''} ref={ref ? ref : null}>
+        <div id={id ? id : ''}>
             {size == 1 && <h1>{text}</h1>}
             {size == 2 && <h2>{text}</h2>}
             {size == 3 && <h4>{text}</h4>}
