@@ -25,7 +25,7 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="Questo è il preventivo per lo sviluppo del nuovo sito web di cuginisandri.it, di seguito sono elencate le caratteristiche in dettaglio del progetto, le tecnologie, i tempi di sviluppo i prezzi ed altro. Invitiamo pertanto il cliente a leggere l'intera pagina web per avere una visione completa del progetto."
+          text="Questo è il preventivo per lo sviluppo del nuovo sito web di cuginisandri.it, di seguito sono elencate le caratteristiche in dettaglio del progetto, le tecnologie, i tempi di sviluppo, i prezzi ed altro. Invitiamo pertanto il cliente a leggere l'intera pagina web per avere una visione completa del progetto."
           size={1}
         />
         <Spacing height={48} />
@@ -96,7 +96,7 @@ export default function Content() {
         <Spacing height={48} />
         <Citation 
           title='Nota sulle sezioni modificabili in autonomia:'
-          description="Le sezioni modificabili in autonomia devono essere scelte in base alle neccessità del progetto e alla volontà del cliente. In questi casi si rendono modificabile i contenuti che possono cambiare nel tempon ,on ogni piccolo dettaglio del sito, allo scopo di aumentare la semplicità di gestione per il cliente."
+          description="Le sezioni modificabili in autonomia devono essere scelte in base alle neccessità del progetto e alla volontà del cliente. In questi casi si rendono modificabile i contenuti che possono cambiare nel tempo, non ogni piccolo dettaglio del sito, allo scopo di aumentare la semplicità di gestione per il cliente."
         />
         <Spacing height={80} />
         <ProposalImage 
@@ -113,7 +113,7 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="Utilizziamo le tecnologie per lo sviluppo del progetto che riteniamo migliori per ogni progetto, in modo da avere un sito web veloce, sicuro e affidabile. In questo caso il sito web sarà sviluppato con Next.js, un framework per lo sviluppo di siti web in React.js. Il sito web sarà hostato su Vercel, un servizio di hosting per siti web che permette di avere un sito web veloce e affidabile. Tutte le altre tecnologie sono elencate di seguito."
+          text="Utilizziamo le tecnologie di sviluppo che riteniamo migliori per ogni progetto, in modo da avere un sito web veloce, sicuro e affidabile. In questo caso il sito web sarà sviluppato con Next.js, un framework per lo sviluppo di siti web in React.js. Il sito web sarà hostato su Vercel, un servizio di hosting per siti web che permette di avere un sito web veloce e affidabile. Tutte le altre tecnologie sono elencate di seguito."
           size={1}
         />
         <Spacing height={48} />
@@ -208,7 +208,7 @@ export default function Content() {
         <Spacing height={48} />
         <List 
           data={[
-            'Conferma il progetto via email o telefono se sei pronto per iniziare il progetto.',
+            'Puoi confermare il progetto via email o telefono se sei pronto per iniziare.',
             'Partiremmo con la fase di design, dove ci troveremo per discutere delle modifiche necessarie.',
             'Quando ci saranno progressi nel progetto ci sentiremo via email o direttamente via telefono.',
           ]}
