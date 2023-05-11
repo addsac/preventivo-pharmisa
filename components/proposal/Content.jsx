@@ -20,7 +20,7 @@ export default function Content() {
     <div className='col-span-8 flex flex-col pt-14 pb-32 text-gray-900'>
         <Title 
           id='1'
-          text='Prventivo per il nuovo sito web di Pharmisa s.r.l.'
+          text='Preventivo per il nuovo sito web di Pharmisa s.r.l.'
           size={1}
         />
         <Spacing height={48} />
