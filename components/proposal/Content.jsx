@@ -20,29 +20,29 @@ export default function Content() {
     <div className='col-span-8 flex flex-col pt-14 pb-32 text-gray-900'>
         <Title 
           id='1'
-          text='Sviluppo del sito web cuginisandri.it'
+          text='Prventivo per il nuovo sito web di Pharmisa s.r.l.'
           size={1}
         />
         <Spacing height={48} />
         <Paragraph 
-          text="Questo è il preventivo per lo sviluppo del nuovo sito web di cuginisandri.it, di seguito sono elencate le caratteristiche in dettaglio del progetto, le tecnologie, i tempi di sviluppo, i prezzi ed altro. Invitiamo pertanto il cliente a leggere l'intera pagina web per avere una visione completa del progetto."
+          text="Questo è il preventivo per lo sviluppo del nuovo sito web di Pharmisa s.r.l., a seguire potrai leggere tutti i dettagli del lavoro, come le pagine da sviluppare, i tempi di sviluppo, i costi, la manutenzione e la gestione dei contenuti del sito in autonomia. Ti invitiamo a leggere tutto con attenzione e a contattarci in caso ci sia qualsiasi dubbio."
           size={1}
         />
         <Spacing height={48} />
         <NoteHead 
-          client='Cugini Sandri s.r.l.'
+          client='Pharmisa s.r.l.'
           author='Pegaso Digital Studio'
         />
         <Spacing height={48} />
         <ButtonGroup
-          text1='Conferma'
+          text1='Come confermare'
           text2='Contattaci'
           handleClick1={() => setConfirmModal(true)}
           href2='tel:3478741848'
         />
         <Spacing height={80} />
         <ProposalImage 
-          src='/proposal/bg1.jpg'
+          src='/proposal/pharmisa_proposal_placeholder.jpg'
           grid={1}
         />
 
@@ -55,27 +55,27 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="L'obbiettivo del progetto è costruire il nuovo sito web di cuginisandri.it, partendo dal lavoro del sito web precendente, riportando le grafiche e funzionalità necessarie a non partire da zero. Inoltre il sito web deve essere in grado di essere gestito in autonomia da un utente non tecnico, in modo da poter aggiornarne i contenuti senza intervento di un tecnico."
+          text="Il risultato del lavoro è la costruzione da zero del sito web aziendale di Pharmisa srl dove i potenziali clienti riusciranno a contattare l'azienda e a consultare facilmente il catalogo prodotti disponibili tramite formato PDF. Le fasi di lavoro saranno necessariamente la progettazione grafica del sito web e lo sviluppo del sito web. Il tutto dovrebbe essere pronto in 1 mese dall'inizio dei lavori."
           size={1}
         />
         <Spacing height={48} />
         <Table 
           rows={[
             {
-              text1: 'Modifiche sul design',
+              text1: 'Design del sito',
               text2: '1-2 settimane',
-              description: 'Saranno presenti alcune modifiche al design del sito web, ma in generale sarà molto simile al sito web attuale.'
+              description: 'Il sito web sara progettato per presentare il catalogo dei prodotti, e le informazioni generali dell\'azienda.'
             },
             {
-              text1: 'Sviluppo del sito web',
-              text2: '2-4 settimane',
-              description: 'Il sito verrà svilippato con tecnologie moderne che permettono di avere un sito web veloce e sicuro.'
+              text1: 'Sviluppo del sito',
+              text2: '2-3 settimane',
+              description: 'Il sito verrà svilippato con tecnologie moderne che permettono di avere un sito web veloce e moderno.'
             },
           ]}
           finalRows={[
             {
               text1: 'Tempo totale',
-              text2: '3-6 settimane',
+              text2: '3-5 settimane',
               description: ''
             },
           ]}
@@ -90,14 +90,14 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="I contenuti del sito (testi principali, immagini, descrizioni dei prodotti, contatti...) saranno gestiti con un software cms esterno chiamato Contentful. È uno strumento gratuito e facile da far utilizzare anche da una persona non abituata ad usate questo tipo di strumenti."
+          text="I contenuti del sito saranno gestiti con un software di gestione dei contenuti chiamato Contentful. È uno strumento gratuito e facile da far utilizzare anche da una persona non abituata ad usate questo tipo di strumenti. Con questo l'azienda portà modificare i pdf e le categorie di articoli presenti nel sito."
           size={1}
         />
         <Spacing height={48} />
-        <Citation 
+        {/* <Citation 
           title='Nota sulle sezioni modificabili in autonomia:'
           description="Le sezioni modificabili in autonomia devono essere scelte in base alle neccessità del progetto e alla volontà del cliente. In questi casi si rendono modificabile i contenuti che possono cambiare nel tempo, non ogni piccolo dettaglio del sito, allo scopo di aumentare la semplicità di gestione per il cliente."
-        />
+        /> */}
         <Spacing height={80} />
         <ProposalImage 
           src='/proposal/contentful.jpg'
@@ -113,7 +113,7 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="Utilizziamo le tecnologie di sviluppo che riteniamo migliori per ogni progetto, in modo da avere un sito web veloce, sicuro e affidabile. In questo caso il sito web sarà sviluppato con Next.js, un framework per lo sviluppo di siti web in React.js. Il sito web sarà hostato su Vercel, un servizio di hosting per siti web che permette di avere un sito web veloce e affidabile. Tutte le altre tecnologie sono elencate di seguito."
+          text="Utilizziamo le tecnologie di sviluppo che riteniamo migliori per ogni progetto, in modo da avere un sito web veloce, sicuro e affidabile. In questo caso il sito web sarà sviluppato con Next.js, un framework per lo sviluppo di siti web in React.js. Tutte le altre tecnologie sono elencate di seguito."
           size={1}
         />
         <Spacing height={48} />
@@ -121,27 +121,17 @@ export default function Content() {
           rows={[
             {
               text1: 'React',
-              text2: 'Libreria javascript',
+              text2: 'Libreria frontend per la creazione di interfacce utente',
               description: '',
             },
             {
               text1: 'Next.js',
-              text2: 'Framework di sviluppo',
+              text2: 'Framework di sviluppo per React.js',
               description: '',
             },
             {
-              text1: 'Tailwind',
-              text2: 'Libreria di stile',
-              description: '',
-            },
-            {
-              text1: 'Vercel',
-              text2: 'Piattaform hosting',
-              description: '',
-            },
-            {
-              text1: 'Framer motion',
-              text2: 'Libreria di animazioni',
+              text1: 'Contenful',
+              text2: 'Cms per la gestione dei contenuti',
               description: '',
             },
           ]}
@@ -156,7 +146,7 @@ export default function Content() {
         />
         <Spacing height={48} />
         <Paragraph 
-          text="Il prezzo del progetto è di 1.400 € iva esclusa, include le modifiche al design del progetto, il suo sviluppo, la messa online, e la possibilità di modificare i contenuti in autonomia. Il costo di gestione per la gestione del dominio e dell'hosting costa 200 € / anno. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di gestione (che comprende gestione completa dell'agenzia del  dominio e hosting) sarà addebitato ad ogni rinnovo del dominio (1 volta all'anno)."
+          text="Il prezzo del progetto è di 1.000 € iva esclusa. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Altri costi di gestione del sito (il dominio) sarà addebitati direttamente dal servizio all'azienda (Pharmisa) ad ogni rinnovo del dominio (1 volta all'anno)."
           size={1}
         />
         <Spacing height={48} />
@@ -164,19 +154,19 @@ export default function Content() {
           rows={[
             {
               text1: 'Sviluppo completo del sito',
-              text2: '1.400 €',
+              text2: '1000 €',
               description: '',
             },
             {
-              text1: 'Canone di gestione annuo',
-              text2: '200 € / anno',
-              description: 'Che comprende la gestione del dominio e dell\'hosting del sito web',
+              text1: 'Canone di rinnovo dominio',
+              text2: '20 € / anno',
+              description: 'Che comprende la gestione del dominio',
             },
           ]}
         />
         <Spacing height={24} />
         <Paragraph 
-          text="Tutti i prezzi sono da intendersi esclusi IVA."
+          text="Tutti i prezzi sono da intendersi esclusi IVA. Il pagamento deve essere effettuato entro 30 giorni dalla messa online del sito web a meno che non sia stato concordato diversamente."
           size={3}
         />
 
@@ -189,10 +179,10 @@ export default function Content() {
         <Spacing height={48} />
         <List 
           data={[
-            <Fragment key={1}> <span className='font-medium'>Preparato per:</span> &nbsp; Cugini Sandri s.r.l. </Fragment>,
+            <Fragment key={1}> <span className='font-medium'>Preparato per:</span> &nbsp; Pharmisa s.r.l. </Fragment>,
             <Fragment key={2}> <span className='font-medium'>Preparato da:</span> &nbsp; Pegaso Digital Studio </Fragment>,
-            <Fragment key={3}> <span className='font-medium'>Costo totale del progetto:</span> &nbsp; 1400 € </Fragment>,
-            <Fragment key={4}> <span className='font-medium'>Tempi totali di sviluppo:</span> &nbsp; 3/6 settimane </Fragment>,
+            <Fragment key={3}> <span className='font-medium'>Costo totale del progetto:</span> &nbsp; 1000 € </Fragment>,
+            <Fragment key={4}> <span className='font-medium'>Tempi totali di sviluppo:</span> &nbsp; 3/5 settimane </Fragment>,
             <Fragment key={5}> <span className='font-medium'>Servizi:</span> &nbsp; Web Design, Sviluppo web </Fragment>,
           ]}
           type='none'
@@ -218,7 +208,7 @@ export default function Content() {
         <Spacing height={80} />
 
         <ButtonGroup
-          text1='Conferma'
+          text1='Come confermare'
           text2='Contattaci'
           handleClick1={() => setConfirmModal(true)}
           href2='tel:3478741848'
@@ -240,7 +230,7 @@ export default function Content() {
             },
             {
               question: 'Come posso pagare?',
-              answer: 'Il pagamento verrà effetuato tramite bonifico bancario. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web. Quello del canone di gestione (che comprende gestione completa dell\'agenzia del  dominio e hosting) sarà addebitato ogni inizio dell\'anno.'
+              answer: 'Il pagamento verrà effetuato tramite bonifico bancario. Il pagamento del progetto deve essere versato entro 30 giorni dalla messa online del sito web.'
             },
             {
               question: 'Quali saranno i modi per comunicare durante il progetto?',

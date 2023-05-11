@@ -9,9 +9,10 @@ export default function ProposalImage({ src = '', grid = 1 }) {
             >
                 <Image 
                     src={src}
-                    width={1000}
-                    height={500}
+                    width={1920}
+                    height={1080}
                     className='w-full h-auto object-cover'
+                    quality={80}
                     alt=''
                 />
             </div>
