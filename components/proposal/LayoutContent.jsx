@@ -24,7 +24,7 @@ export default function LayoutContent({ children }) {
 
         <div className="flex flex-col gap-0.5 text-right text-gray-900">
           <p className="text-sm lg:text-base font-medium">
-            Preventivo Cugini Sandri s.r.l
+            Preventivo Pharmisa s.r.l
           </p>
           <p className="text-sm font-medium opacity-50 tracking-[-0.1px]">
             Questo sito è riservato

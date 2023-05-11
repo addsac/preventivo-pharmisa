@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Preventivo sito web | Cugini Sandri s.r.l.</title>
+        <title>Preventivo sito web | Pharmisa s.r.l.</title>
         <meta name="description" content="by Pegaso Digital Studio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
