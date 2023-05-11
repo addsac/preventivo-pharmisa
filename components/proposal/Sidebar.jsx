@@ -88,7 +88,7 @@ export default function Sidebar() {
                     </div>
                 </div>
                 <Button
-                    text='Conferma preventivo'
+                    text='Come confermare'
                     color='primary'
                     size='large'
                     handleClick={() => setConfirmModal(true)}
